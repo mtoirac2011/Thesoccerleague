@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Thesoccerleague.Models
 {
-    public class MyDbContext : DbContext
+    public class MyDbContext : IdentityDbContext
     {
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
