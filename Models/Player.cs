@@ -21,5 +21,6 @@ namespace Thesoccerleague.Models
         [Display(Name = "Team")]
         public int TeamId { get; set; }
         public Team Team { get; set; }
+
     }
 }
