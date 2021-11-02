@@ -47,7 +47,7 @@ namespace Thesoccerleague.Controllers
         // GET: Player/Create
         public IActionResult Create()
         {
-            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamFounded");
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamName");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace Thesoccerleague.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamFounded", player.TeamId);
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamName", player.TeamId);
             return View(player);
         }
 
@@ -81,7 +81,7 @@ namespace Thesoccerleague.Controllers
             {
                 return NotFound();
             }
-            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamFounded", player.TeamId);
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamName", player.TeamId);
             return View(player);
         }
 
@@ -117,7 +117,7 @@ namespace Thesoccerleague.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamFounded", player.TeamId);
+            ViewData["TeamId"] = new SelectList(_context.Team, "TeamId", "TeamName", player.TeamId);
             return View(player);
         }
 
