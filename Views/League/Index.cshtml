@@ -31,7 +31,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                <img src=@item.LeagueLogo width="60" height="60">
+                <ol>
+                    <li href="#"><img src=@item.LeagueLogo width="60" height="60"></li>
+                </ol>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LeagueName)

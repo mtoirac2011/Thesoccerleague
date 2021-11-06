@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.TeamName)
             </th>
             <th>
@@ -30,6 +33,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                <img src=@item.TeamLogo width="40" height="40">
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TeamName)
             </td>
